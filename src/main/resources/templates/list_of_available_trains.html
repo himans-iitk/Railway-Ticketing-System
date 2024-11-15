@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http:www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.css"/>
+    <title>Upcoming Journeys</title>
+    <style>
+        /* Add a background image to the container */
+        .container {
+            background-image: url("../static/img/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        } 
+        /* Style the table */
+        #train-table {
+            margin-top: 50px; /* Add some spacing above the table */
+            border-collapse: collapse; /* Remove cell spacing */
+            width: 100%; /* Make the table take up the full width of the container */
+        }
+        /* Add some padding and text alignment to the table cells */
+        #train-table th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        /* Add a background color and font color to the table header */
+        #train-table th {
+            background-color: #5c7cfa; /* Light blue */
+            color: white;
+        }
+        /* Style the h2 heading */
+        h2 {
+            margin-top: 30px; /* Add some spacing above the heading */
+            text-align: center; /* Center the heading */
+        }
+    </style>
+</head>
+<body class="navbar-inner">
+    <div class="container">
+        <div th:replace="fragments/navbar2::navbar"></div>
+        <h2 class="text-center">Train Schedule</h2>
+                <hr/>
+       
+       <table class="table table-bordered table-striped" id="train_schedule">
+                
+                <thead>
+                
+                <tr>
+                
+                <th>Train Name</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Departure Time</th>
+                <th>Departure Date</th>
+                <th>Arrival Time</th>
+                <th>No of vacant seats</th>
+                <th>Amount</th>
+                <th>Actions</th>
+                
+                </tr>
+                </thead>
+       
+              <tbody>
+              
+              <tr th:each="booking:${books}">
+              <td th:text="${booking.trainName}"></td>
+              <td th:text="${booking.departure}"></td>
+              <td th:text="${booking.arrival}"></td>
+              <td th:text="${booking.departureTime}"></td>
+              <td th:text="${booking.departureDate}"></td>
+              <td th:text="${booking.arrivalTime}"></td>
+              <td th:text="${booking.seats}"></td>
+              <td th:text="${booking.fair}"></td>
+              <td><a class="btn btn-primary"th:href="@{/bookNow(trainName=${booking.trainName},departure=${booking.departure},arrival=${booking.arrival},departureTime=${booking.departureTime},departureDate=${booking.departureDate},arrivalTime=${booking.arrivalTime},fair=${booking.fair})}">BookTicket</a></td>
+              
+              
+              
+              </tr>
+              </tbody>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       </table>
+       </div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+       <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.13.1/datatables.min.js"></script>
+       
+       <script>
+       
+       
+       $(document).ready(function(){
+    	   
+    	   $("#train_schedule").DataTable();
+    	   
+    	   
+    	   
+    	   
+    	   
+       })
+       
+       
+       
+       </script>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+</body>
+</html>

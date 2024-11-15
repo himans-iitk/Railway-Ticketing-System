@@ -1,0 +1,175 @@
+body {
+width: inherit;
+height:inherit;
+    background-image:url("/img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h3{
+text-align: center;
+    margin: 0;
+    color: white !important;
+    font-family: serif;
+}
+.nav-link{
+padding: 0.5rem 3.5rem !important;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #CACACA;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 10;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 29%;
+  background: #fff;
+  padding: 3.5% 1.2% 0% 1.2%;
+  border-radius: 25px;
+  border-width: 56;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  margin-top: 2%;
+  margin-left: 1.7%;
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+  margin-bottom: 0.47%;
+  text-transform: uppercase;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+input[type="time"]: placeholder-shown;
+
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 13%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-layer{
+margin-top: 11%;}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 17px;
+  border-width: 3px;
+  border: 1px solid #6C448B;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.form-check{
+margin:0%}
+
+.form-inner form .field input:focus{
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 0.5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 0.3%;
+}
+
+form .btn{
+  height: 11%;
+  width: 100%;
+  border-radius: 17px;
+  background-color: #6C448B;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: -100%;
+  border-radius: 5px;
+    margin-top: 11%;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+
+  left: 0;
+}
+
+form .btn input[type="submit"]{
+  height: relative;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding-left:0;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+   background-color: #6C448B;
+}
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 0.1rem;
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 0.7rem;
+    width: 100%;
+}
+.text-center{
+margin-bottom:11%}
+.bg-image-vertical {
+position: relative;
+overflow: hidden;
+background-repeat: no-repeat;
+background-position: right center;
+background-size: auto 100%;
+}
+
+@media (min-width: 1025px) {
+.h-custom-2 {
+height: 100%;
+}
+}
